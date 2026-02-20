@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: kpi_active_last_six_months
+    description: >
+      Daily metric counting distinct customers who made at least one net booking
+      on TheFork Network within the previous 180 days (rolling 6-month window)
+      relative to each date_day.
+
+    columns:
+      - name: date_day
+        description: >
+          Reference calendar date. For each date_day, the metric counts customers
+          with at least one qualifying booking in the previous 180 days.
+        tests:
+          - not_null
+          - unique
+
+      - name: active_customers_6months
+        description: >
+          Number of distinct unified customers who made at least one net booking
+          on TheFork Network within the 180 days preceding and including date_day.
+        tests:
+          - not_null
+
+
+  - name: kpi_30days_repeaters
+    description: >
+      Customers whose second booking occurs within 30 days of their first booking
+      on TheFork Network and net bookings only.
+
+    columns:
+      - name: second_booking_date
+        description: >
+          Date of the second booking that qualifies the customer
+          as a 30-day repeater.
+        tests:
+          - not_null
+          - unique
+
+      - name: repeaters_30days
+        description: >
+          Count of distinct unified customers whose second booking
+          occurred within 30 days of their first booking.
+        tests:
+          - not_null
