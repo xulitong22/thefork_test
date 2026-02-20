@@ -40,7 +40,7 @@ repeaters as(
 
 select
     second_booking_date,
-    booking_lead_days,
+    (case when booking_lead_days = 0 then false else true end) as is_booking_in_advance,
     count(distinct unified_customer_id) as repeaters_30days
 from repeaters
 group by 1,2

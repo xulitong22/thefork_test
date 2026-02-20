@@ -40,7 +40,9 @@ repeaters as(
 
 select
     second_booking_date,
-    party_size,
+    (case when party_size <2 then 's' 
+    when party_size >= 2 and party_size <= 4 then 'm'
+    else 'l' end) as party_size,
     count(distinct unified_customer_id) as repeaters_30days
 from repeaters
 group by 1,2
