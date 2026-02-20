@@ -26,9 +26,9 @@ This project demonstrates an end-to-end analytics workflow using PostgreSQL, dbt
 
 #### Bronze Layer
 
-Kept raw data barely untouched.
+- Kept raw data barely untouched.
 
-Used views as materialization.
+- Used views as materialization.
 
 #### Silver Layer
 
