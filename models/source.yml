@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    database: thefork
+    schema: raw
+    tables:
+      - name: offline_customers
+      - name: online_customers
+      - name: reservations
