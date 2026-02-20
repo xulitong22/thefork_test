@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: dimension table for customers
+
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_restaurants
+    description: dimension table for restaurants
+
+    columns:
+      - name: restaurant_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_dates
+    description: >
+      calendar for reservations, ranging from min booking_date to max booking_date
+
+    columns:
+      - name: date_day
+        tests:
+          - not_null
+          - unique 
+
+  - name: fct_reservations
+    description: fact table of reservations
+
+    columns:
+      - name: reservation_id
+        tests:
+          - not_null
+          - unique

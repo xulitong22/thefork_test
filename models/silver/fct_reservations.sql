@@ -16,3 +16,4 @@ select
         lunch_type,
         (dt_day_meal_date - dt_day_booking_date) as booking_lead_days
 from source
+where reservation_uuid is not null
