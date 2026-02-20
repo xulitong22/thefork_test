@@ -24,43 +24,43 @@ This project demonstrates an end-to-end analytics workflow using PostgreSQL, dbt
 
 - Followed a medallion architecture:
 
-#### Bronze Layer
+    #### Bronze Layer
 
-- Kept raw data barely untouched.
+    - Kept raw data barely untouched.
 
-- Used views as materialization.
+    - Used views as materialization.
 
-#### Silver Layer
+    #### Silver Layer
 
-- Built a star schema for analytics:
+    - Built a star schema for analytics:
 
-    - Dimension tables: dim_customers, dim_restaurants, dim_dates
+        - Dimension tables: dim_customers, dim_restaurants, dim_dates
 
-    - Fact table: fct_reservations
+        - Fact table: fct_reservations
 
-- Applied transformations:
+    - Applied transformations:
 
-    - Removed unnecessary metadata columns
+        - Removed unnecessary metadata columns
 
-    - Combined online and offline customer data
+        - Combined online and offline customer data
 
-    - Extracted restaurant information from raw data
+        - Extracted restaurant information from raw data
 
-    - Added dbt tests in schema.yml to ensure data quality
+        - Added dbt tests in schema.yml to ensure data quality
 
-    - Used views for materialization
+        - Used views for materialization
 
-#### Gold Layer
+    #### Gold Layer
 
-- Created models to calculate two KPIs:
+    - Created models to calculate two KPIs:
 
-    - Active Last 6 Months
+        - Active Last 6 Months
 
-    - 30-Day Repeaters
+        - 30-Day Repeaters
 
-- Explored different dimensions for additional insights
+    - Explored different dimensions for additional insights
 
-- Exported KPI tables for visualization
+    - Exported KPI tables for visualization
 
 3. Dashboard
 
