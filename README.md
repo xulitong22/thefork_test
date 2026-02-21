@@ -14,15 +14,15 @@ This project demonstrates an end-to-end analytics workflow using PostgreSQL, dbt
 ### Project Workflow
 1. Data Ingestion
 
-- Created a raw schema in PostgreSQL to serve as a landing zone for CSV files.
+    - Created a raw schema in PostgreSQL to serve as a landing zone for CSV files.
 
-- Loaded the provided CSV files (offline_customers, online_customers, reservations) into PostgreSQL.
+    - Loaded the provided CSV files (offline_customers, online_customers, reservations) into PostgreSQL.
 
 2. dbt Modeling
 
-- Connected dbt to PostgreSQL to build the project.
+    - Connected dbt to PostgreSQL to build the project.
 
-- Followed a medallion architecture:
+    - Followed a medallion architecture:
 
     #### Bronze Layer
 
