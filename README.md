@@ -69,3 +69,6 @@ This project demonstrates an end-to-end analytics workflow using PostgreSQL, dbt
 - Built interactive dashboards to visualize trends and segment KPIs by dimensions such as month, country, and lunch type.
 
 - Added controls such as date range filters for flexible exploration.
+
+### Looker Studio Report Link
+https://lookerstudio.google.com/reporting/2d184c5c-926c-4e34-9cba-fe28a7d16ae7
